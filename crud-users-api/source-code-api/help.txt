@@ -1,0 +1,24 @@
+Testando APIs com Ferramentas de Linha de Comando (CLI)
+
+a. HTTPie
+
+O HTTPie é uma ferramenta de linha de comando muito popular, que é uma alternativa mais amigável ao cURL. Ele tem uma sintaxe mais simples e legível, além de permitir que você envie requisições e visualize as respostas de forma mais organizada.
+
+Instalar o HTTPie:
+
+pip install httpie
+Exemplo de uso:
+
+GET: Obter todos os usuários:
+
+http GET http://127.0.0.1:5000/usuarios
+POST: Criar um usuário:
+
+http POST http://127.0.0.1:5000/usuarios nome="Carlos" idade=30
+PUT: Atualizar um usuário:
+
+http PUT http://127.0.0.1:5000/usuarios/4 nome="Carlos Atualizado" idade=31
+DELETE: Deletar um usuário:
+
+http DELETE http://127.0.0.1:5000/usuarios/4
+HTTPie tem uma saída mais amigável e legível para humanos, o que facilita o uso e a visualização das respostas.
