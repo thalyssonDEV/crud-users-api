@@ -77,5 +77,15 @@ def delete_usuario(id):
     salvar_dados(dados)
     return jsonify({"mensagem": "Usuário deletado com sucesso"})
 
+@app.route('/usuarios', methods=['DELETE'])
+def delete_all_users():
+    dados = ler_dados()
+
+    dados.clear()
+
+    salvar_dados(dados)
+    return jsonify({"mensagem": "Usuários deletados com sucesso"})
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

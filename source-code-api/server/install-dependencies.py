@@ -1,11 +1,9 @@
-def install_flask():
-    pass
+def install_dependencies():
+    
+    import subprocess
 
-def install_httpie():
-    pass
+    # Comando para instalar pacotes
+    command_path = "pip install flask httpie requests"
 
-def install_requests():
-    pass
-
-def install_main() -> None:
-    pass
+    # Executa o comando
+    subprocess.run(command_path, shell=True, check=True)
